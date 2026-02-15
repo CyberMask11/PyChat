@@ -1,16 +1,31 @@
 # 🚀 Real-Time WebChat Application
 
-This project is a full-stack real-time WebChat system built using FastAPI, WebSockets, and a Dockerized database. It demonstrates secure authentication, token-based session handling, and live messaging across network boundaries.
+I built a real-time chat system from scratch — not just a messaging UI, but the full backend architecture that powers it.
 
-The application supports account creation (SignUp) and Login with securely hashed passwords, followed by JWT token generation using the HS256 algorithm. Tokens are required for WebSocket connections and are validated before a client is accepted into the chat session. User data is stored in a containerized database environment to simulate production-style separation between application and persistence layers.
+This project includes secure account creation (SignUp & Login), password hashing, JWT-based authentication (HS256), and live global messaging using WebSockets. Every WebSocket connection requires a valid token before being accepted, meaning authentication isn’t just for HTTP — it protects real-time communication too.
 
-The backend was fully designed and implemented by me using a clean layered architecture (Router → Service → Repository). The router handles HTTP and WebSocket endpoints, the service layer manages business logic and validation, and the repository layer interacts directly with the database. Real-time messaging is handled through a WebSocket connection manager that tracks active users and broadcasts messages accordingly while handling disconnections gracefully.
+User data is stored inside a Dockerized database container, separating application logic from persistence just like a production environment would. The backend follows a clean layered architecture (Router → Service → Repository), keeping business logic structured and maintainable instead of mixing everything together.
 
-The frontend connects to the backend over separate ports and manages authentication state, token flow, and real-time UI updates. It includes login and signup screens, a live chat dashboard, user search functionality, connection status indicators, and a dark glass-style theme. While I do not specialize in frontend development yet, the UI was AI-assisted and fully integrated by me with the backend logic and real-time communication layer.
+The real-time chat system manages active connections, broadcasts messages globally, and gracefully handles disconnects. No polling. No refresh spam. Just live communication.
 
-This project required handling cross-port communication, CORS configuration, public IP exposure, WebSocket token validation, and debugging real-world networking behavior such as NAT loopback and port forwarding. It reflects practical backend engineering beyond simple CRUD applications and demonstrates understanding of authentication flows, state management, and distributed communication.
+The frontend includes:
+• Login & Signup screens  
+• Real-time global chat dashboard  
+• Connection status indicator  
+• User search functionality  
+• Dark red / black / purple glass-style theme  
 
-Tech Stack: FastAPI · SQLAlchemy · WebSockets · JWT (HS256) · Docker · PostgreSQL · HTML · CSS · JavaScript
+I don’t specialize in frontend development yet, so the UI was AI-assisted — but the integration, authentication flow, networking logic, deployment setup, and real-time system design were fully implemented by me.
+
+This project pushed me beyond simple CRUD apps and into real-world challenges like:
+• Cross-port frontend/backend communication  
+• Public IP exposure and port forwarding  
+• NAT loopback behavior  
+• CORS configuration  
+• WebSocket token validation  
+• Debugging networking issues that don’t show up in tutorials  
+
+Tech Stack: FastAPI · SQLAlchemy · WebSockets · JWT · Docker · PostgreSQL · HTML · CSS · JavaScript
 
 To run locally:
 
