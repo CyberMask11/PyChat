@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-URL = "postgresql://graymask:neveahbott5@localhost:5432/pychat"
+URL = "postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@localhost:5432/{POSTGRES_DB}"
 engine = create_engine(URL)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 base = declarative_base()
