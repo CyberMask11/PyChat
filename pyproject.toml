@@ -1,0 +1,17 @@
+[project]
+name = "pychat"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bcrypt==3.2.2",
+    "fastapi[standard]>=0.128.5",
+    "passlib[bcrypt]>=1.7.4",
+    "psycopg2-binary>=2.9.11",
+    "pyjwt>=2.11.0",
+    "python-decouple>=3.8",
+    "sqlalchemy>=2.0.46",
+    "uvicorn>=0.40.0",
+    "websockets>=16.0",
+]

@@ -1,0 +1,88 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# -----------------------------
+# FastAPI / Uvicorn
+# -----------------------------
+*.log
+uvicorn.log
+
+# -----------------------------
+# VSCode
+# -----------------------------
+.vscode/
+.history/
+
+# -----------------------------
+# Environment variables
+# -----------------------------
+.env
+.env.*
+!.env.example
+
+# -----------------------------
+# Database
+# -----------------------------
+*.sqlite3
+*.db
+*.db-journal
+
+# Docker volumes
+docker-data/
+postgres-data/
+
+# -----------------------------
+# OS files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Testing / coverage
+# -----------------------------
+.coverage
+htmlcov/
+.pytest_cache/
+
+# -----------------------------
+# Node (if ever used)
+# -----------------------------
+node_modules/
+
+# -----------------------------
+# Misc
+# -----------------------------
+*.swp
+*.swo
+
