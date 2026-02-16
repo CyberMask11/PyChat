@@ -25,7 +25,7 @@ app.add_middleware(
 )
 
 app.include_router(route, tags=["Authentication"], prefix="/auth")
-app.include_router(api, tags=["WebChat"], prefix='/chat')
+app.include_router(api, tags=["WebChat"])
 
 @app.get('/users', status_code=200, response_model=list[UserInOutput])
 def get_users(
