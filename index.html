@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Jay and Daisy's WebChat</title>
+<title>PyChat</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -261,8 +261,7 @@ let token=null;
 let ws=null;
 let usernameGlobal=null;
 let reconnectTimer=null;
-
-/* 🔥 AUTO-DETECT HOST (THIS FIXES EVERYTHING) */
+  
 const API_BASE = `http://${location.hostname}:8080`;
 const WS_BASE  = `ws://${location.hostname}:8080`;
 
@@ -327,7 +326,7 @@ document.getElementById("currentUser").innerText="User: "+usernameGlobal;
 function connectWebSocket(){
 if(ws) return;
 
-ws=new WebSocket(`${WS_BASE}/chat/ws?token=${token}`);
+ws=new WebSocket(`${WS_BASE}/ws?token=${token}`);
 
 ws.onopen=()=>{
 updateStatus(true);
